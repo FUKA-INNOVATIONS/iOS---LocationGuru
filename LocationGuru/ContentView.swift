@@ -15,7 +15,13 @@ struct ContentView: View {
             if locationManager.userLocation == nil {
                 LocationRequestView()
             } else if let location = locationManager.userLocation {
-                Text("Location object\(location)")
+                Text("Latitude: \(location.coordinate.latitude)")
+                    .padding()
+                Text("Longitude: \(location.coordinate.longitude)")
+                    .padding()
+                Text("Timestamp: \(location.timestamp)")
+                    .padding()
+                Text("Latitude\(location)")
                     .padding()
             }
         }
